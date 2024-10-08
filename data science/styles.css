@@ -1,0 +1,219 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: orangered;
+    margin-bottom: 40px;
+}
+.icon-name{
+    color: white;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: orangered;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Timeline items */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hide items */
+}
+
+.timeline-item.left {
+    left: 0;
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.timeline-item.right {
+    left: 50%;
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Assign delay to each timeline item */
+.timeline-item.left:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.timeline-item.right:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.timeline-item.left:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.timeline-item.right:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.timeline-item.left:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.timeline-item.right:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.timeline-item.left:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.timeline-item.right:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+/* Align text and icons */
+.timeline-item.left .icon-name {
+    text-align: right;
+}
+
+.timeline-item.right .icon-name {
+    text-align: left;
+}
+
+/* Icon styles */
+.icon {
+    font-size: 25px;
+    color: orangered;
+    margin-bottom: 10px;
+    display: block; /* Center the icon */
+}
+
+/* icons colors*/
+
+.fa-r-project{
+    font-size: 30px;
+    color: yellow;
+}
+.fa-chart-simple{
+    font-size: 30px;
+    color: green;
+}
+.fa-signal{
+    font-size: 30px;
+    color: goldenrod;
+
+}
+.fa-broom{
+    font-size: 30px;
+    color: white;
+}
+.fa-filter{
+    font-size: 30px;
+    color: orangered;
+}
+.fa-gear{
+    font-size: 30px;
+    color: grey;
+}
+.fa-network-wired{
+    font-size: 30px;
+    color: yellow;
+}
+.fa-python{
+    font-size: 30px;
+    color: blue;
+}
+.fa-aws{
+    font-size: 30px;
+    color: white;
+}
+.fa-database{
+    font-size: 30px;
+    color: orangered;
+}
+.fa-gear{
+    font-size: 30px;
+    color: white;
+}
+.fa-wrench{
+    font-size: 30px;
+    color: orangered;
+}
+.fa-shield{
+    font-size: 30px;
+    color: blue;
+}
+.fa-lock{
+    font-size: 30px;
+    color: yellow;
+}
+.fa-key{
+    font-size: 30px;
+    color: green;
+}
+
+
+
+
+
+/* Horizontal branch styles */
+.branch {
+    height: 4px; /* Thickness of the branch */
+    width: 5%; /* Width of the branch */
+    background-color: orangered; /* Change color as needed */
+    position:absolute;
+    top: 30px; /* Position the branch relative to the icon */
+    
+    left: 20%; /* Center align the branch */
+    margin-left: -20%; /* Center it */
+}
+
+.branch1 {
+    height: 4px; /* Thickness of the branch */
+    width: 5%; /* Width of the branch */
+    background-color: orangered; /* Change color as needed */
+    position:absolute;
+    top: 30px; /* Position the branch relative to the icon */
+    
+    right: 20%; /* Center align the branch */
+    margin-right: -20%; /* Center it */
+}
+
+/* Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
